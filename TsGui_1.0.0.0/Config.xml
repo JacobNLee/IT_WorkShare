@@ -106,7 +106,7 @@
 					</Option>
 
 					<Option><!-- 5 -->
-						<Toggle Group="Group_Ecc">
+						<Toggle Group="Group_ECC">
 							<Hide/>
 						</Toggle>
 						<Text>Engineering Computing Center</Text>
