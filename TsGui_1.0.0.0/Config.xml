@@ -433,8 +433,12 @@
 
 		<Row>		
 			<Column>
+<<<<<<< HEAD
 				<!--
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
+=======
+				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15" ID = "source_computerName">	
+>>>>>>> ef368147b9d4689888bb51b74287d8da3868ee60
 					<Disallowed>
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
 					</Disallowed>
@@ -760,8 +764,8 @@
 					<Label>Computer Name</Label>
 					<HelpText>Current Computer Name</HelpText>
 					<SetValue>
-						<Query Type="Wmi">
-							<Wql>SELECT Name FROM Win32_ComputerSystem</Wql>	
+						<Query Type="OptionValue">
+							<ID Name="source_computerName"/>
 						</Query>
 					</SetValue>
 				</GuiOption>
