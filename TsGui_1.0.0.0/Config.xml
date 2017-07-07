@@ -106,7 +106,7 @@
 					</Option>
 
 					<Option><!-- 5 -->
-						<Toggle Group="Group_Ecc">
+						<Toggle Group="Group_ECC">
 							<Hide/>
 						</Toggle>
 						<Text>Engineering Computing Center</Text>
@@ -717,7 +717,7 @@
 	</Page>
 	
 	<Page PurgeInactive="TRUE">
-		<Group>Group_Ecc</Group>
+		<Group>Group_ECC</Group>
 		<Heading><!-- Heading ECC -->
 			<Bg-Color>#003366</Bg-Color>
 			<Title>ECC</Title>
