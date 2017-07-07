@@ -114,20 +114,6 @@
 					</Option>
 				</GuiOption><!-- End Collection List-->
 
-				<GuiOption Type="DropDownList" ID="source_os"><!-- OS List -->
-					<Variable>os</Variable>
-					<Label>Operating System</Label>
-					<HelpText>Selects Currently Available OS</HelpText>
-					<Option>
-						<Text>Windows 7, 64-bit</Text>
-						<Value>win7</Value>
-					</Option>
-					<Option>
-						<Text>Windows 10, 64-bit</Text>
-						<Value>win10</Value>
-					</Option>
-				</GuiOption><!-- End OS List -->
-
 				<GuiOption Type="FreeText"><!-- Link Test -->
 					<Variable>free_link</Variable>
 					<SetValue>
@@ -442,10 +428,9 @@
 						<Text>Writing Center</Text>
 						<Value>writing</Value>
 					</Option>
-
-				</GuiOption>		
-
+				</GuiOption><!-- End Lab Areas List -->
 			</Column>
+
 			<Row>
 			<Column>
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
@@ -665,6 +650,20 @@
 					</Option>
 				</GuiOption>
 
+				<GuiOption Type="DropDownList" ID="source_os"><!-- OS List -->
+					<Variable>os</Variable>
+					<Label>Operating System</Label>
+					<HelpText>Selects Currently Available OS</HelpText>
+					<Option>
+						<Text>Windows 7, 64-bit</Text>
+						<Value>win7</Value>
+					</Option>
+					<Option>
+						<Text>Windows 10, 64-bit</Text>
+						<Value>win10</Value>
+					</Option>
+				</GuiOption><!-- End OS List -->
+
 				<!-- Mod Name -->
 				<GuiOption Type="FreeText" MaxLength="15" MinLength="8">
 					<Disallowed>
@@ -755,7 +754,6 @@
 				<Height>34</Height>
 				<Stretch>Uniform</Stretch>					
 			</Image>
-
 		</Heading>
 
 		<Row>		
