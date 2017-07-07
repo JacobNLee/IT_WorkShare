@@ -231,7 +231,6 @@
 
 		<Row>
 			<Column>
-
 				<!-- List to modify dropdownlist -->
 				<GuiOption Type="DropDownList">
 					<Variable>Var_LabArea</Variable>
@@ -430,8 +429,9 @@
 					</Option>
 				</GuiOption><!-- End Lab Areas List -->
 			</Column>
+		</Row>
 
-			<Row>
+		<Row>		
 			<Column>
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
 					<Disallowed>
@@ -486,7 +486,7 @@
 				-->
 			</Column>
 		</Row>
-		</Row>
+		
 	</Page><!-- End Page Labs -->
 	<!-- ############################################################################## -->
 	<!-- ############################################################################## -->
