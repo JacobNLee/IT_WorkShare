@@ -511,7 +511,7 @@
 		<Row>
 			<Column>
 				<!-- List to modify dropdownlist -->
-				<GuiOption Type="DropDownList" ID="source_desktop">
+				<GuiOption Type="DropDownList" ID="source_desktop_Inderect">
 					<Variable>Var_DesktopArea</Variable>
 					<Label>Site Name: </Label>
 					<Option><!-- N -->
@@ -664,13 +664,13 @@
 				</GuiOption><!-- End OS List -->
 
 				<!-- Mod Name -->
-				<GuiOption Type="FreeText" MaxLength="15" MinLength="8">
+				<GuiOption Type="FreeText" MaxLength="15" MinLength="8" ID="source_desktop">
 					<Disallowed>
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
 					</Disallowed>
 					<Label>Computer Name: </Label>
-					<!-- This GuiOption has to be named somthing else the code will crash -->
-					<Variable>Ignore</Variable>
+					
+					<Variable>Desktop_Arr</Variable>
 					<HelpText>Requirements based on collection</HelpText>
 					<SetValue>
 							<Query Type="EnvironmentVariable">
@@ -678,7 +678,7 @@
 								<Ignore>MINNT</Ignore>
 								<Ignore>MINWIN</Ignore>
 							</Query>
-							<Query Type="LinkTo">source_desktop</Query>
+							<Query Type="LinkTo">source_desktop_Inderect</Query>
 					</SetValue>
 				</GuiOption>
 			</Column>
@@ -737,7 +737,8 @@
 			</Column>
 		</Row>
 	</Page>
-
+	
+	<!-- final page for Labs route-->
 	<Page PurgeInactive="TRUE">
 		<Group>Group_Labs</Group>
 		<!-- Heading Final -->
@@ -809,6 +810,88 @@
 					<SetValue>
 						<Query Type="OptionValue">
 							<ID Name="source_labname"/>
+						</Query>
+					</SetValue>
+				</GuiOption>
+			
+
+			</Column>
+		</Row>
+	</Page>
+	
+	<!-- final page for Desktop route-->
+	<Page PurgeInactive="TRUE">
+		<Group>Group_Desktop</Group>
+		<!-- Heading Final -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Final</Title>
+			<Text>Please Provide a Final Confirmation of User Provided Data</Text>
+			<Height>40</Height>
+			<HAlign>Left</HAlign>		
+
+			<Image>
+				<File>nevada.png</File>
+				<Width>34</Width>
+				<Height>34</Height>
+				<Stretch>Uniform</Stretch>					
+			</Image>
+		</Heading>
+
+		<Row>		
+			<Column>
+				<Formatting>
+					<LeftCellWidth>170</LeftCellWidth>
+					<RightCellWidth>200</RightCellWidth>
+				</Formatting>f
+				
+				<!-- GUIOptions -->
+				<!-- Computer Name printout -->
+				<GuiOption Type="InfoBox">
+					<Variable>VAL_CompName</Variable>
+					<Label>Computer Name</Label>
+					<HelpText>Current Computer Name</HelpText>
+					<SetValue>
+						<Query Type="OptionValue">
+							<ID Name="source_computerName"/>
+						</Query>
+					</SetValue>
+				</GuiOption>
+				
+				<!-- collection printout -->
+				<GuiOption Type="InfoBox">
+					
+					<Label>User Selected Collection</Label>
+					<HelpText>Current selected collection</HelpText>
+					<SetValue>
+						<Query Type="OptionValue">
+							<ID Name="source_collection"/>
+						</Query>
+					</SetValue>
+				</GuiOption>
+				
+				<!-- OS printout -->
+				<GuiOption Type="InfoBox">
+					
+					<Label>Operating System</Label>
+					<HelpText>Current Computer Operating System</HelpText>
+					<SetValue>
+						<Query Type="OptionValue">
+							<ID Name="source_os"/>
+						</Query>
+					</SetValue>
+				</GuiOption>
+				
+
+				
+				<!-- Lab Name printout -->
+				
+				<GuiOption Type="InfoBox" PurgeInactive="TRUE">
+					<Label>User Selected Desktop Area</Label>
+					<HelpText>Current Selected Desktop Location</HelpText>
+					<SetValue>
+						<Query Type="OptionValue">
+							<ID Name="source_desktop"/>
 						</Query>
 					</SetValue>
 				</GuiOption>
