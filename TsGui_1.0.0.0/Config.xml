@@ -719,7 +719,7 @@
 	</Page>
 	
 	<Page PurgeInactive="TRUE">
-		<Group>Group_Ecc</Group>
+		<Group>Group_ECC</Group>
 		<Heading><!-- Heading ECC -->
 			<Bg-Color>#003366</Bg-Color>
 			<Title>ECC</Title>
