@@ -294,87 +294,87 @@
 					</Option>
 					<Option><!-- 15 -->
 						<Text>Dataworks South</Text>
-						<Value>dws</Value>					
+						<Value>Dataworks_South</Value>					
 					</Option>
 					<Option><!-- 16 -->
 						<Text>DeLaMare Library</Text>
-						<Value>dlm</Value>					
+						<Value>DeLaMare_Library</Value>					
 					</Option>	
 					<Option><!-- 17 -->
 						<Text>Disability Resource Center</Text>
-						<Value>drc</Value>					
+						<Value>Disability_Resource_Center</Value>					
 					</Option>
 					<Option><!-- 18 -->
 						<Text>Division of Health Science - Advising Lab</Text>
-						<Value>healthsci</Value>					
+						<Value>Division_of_Health_Science_Advising_Lab</Value>					
 					</Option>
 					<Option><!-- 19 -->
 						<Text>DMS - 106</Text>
-						<Value>dms</Value>					
+						<Value>DMS</Value>					
 					</Option>
 					<Option><!-- 20 -->
 						<Text>Foreign Languages Lab</Text>
-						<Value>fll</Value>
+						<Value>Foreign_Languages_Lab</Value>
 					</Option>	
 					<Option><!-- 21 -->
 						<Text>Glazner</Text>
-						<Value>glazner</Value>
+						<Value>Glazner</Value>
 					</Option>	 
 					<Option><!-- 22 -->
 						<Text>Honor's Program</Text>
-						<Value>honors</Value>
+						<Value>Honors_Program</Value>
 					</Option>	
 					<Option><!-- 23 -->
-						<Text>InNevation Center</Text>
-						<Value>innevation</Value>
+						<Text>Innevation Center</Text>
+						<Value>Innevation_Center</Value>
 					</Option>
 					<Option><!-- 24 -->
 						<Text>Joe Crowley Student Union</Text>
-						<Value>jcsu</Value>
+						<Value>Joe_Crowley_Student_Union</Value>
 					</Option>	 
 					<Option><!-- 25 -->
 						<Text>JCSU - ASUN</Text>
-						<Value>asun</Value>
+						<Value>JCSU_ASUN</Value>
 					</Option>	
 					<Option><!-- 26 -->
 						<Text>JCSU - Cultural Center For Diversity </Text>
-						<Value>diversity</Value>
+						<Value>JCSU_Cultural_Center_For_Diversity</Value>
 					</Option>
 					<Option><!-- 27 -->
-						<Text>JCSU - Graduate Student Association</Text>
+						<Text>JCSU_Graduate_Student_Association</Text>
 						<Value>gsa</Value>
 					</Option>
 					<Option><!-- 28 -->
 						<Text>JCSU - Tech Talk</Text>
-						<Value>techtalk</Value>
+						<Value>JCS_Tech_Talk</Value>
 					</Option>
 					<Option><!-- 29 -->
 						<Text>Knowledge Center - Big Training Lab</Text>
-						<Value>bigtrain</Value>
+						<Value>Knowledge_Center_Big_Training_Lab</Value>
 					</Option>
 					<Option><!-- 30 -->
 						<Text>KC - Floor 1</Text>
-						<Value>kcfl1</Value>
+						<Value>KC_Floor1</Value>
 					</Option>
 					<Option><!-- 31 -->
 						<Text>KC - Floor 2</Text>
-						<Value>kcfl2</Value>
+						<Value>KC_Floor2</Value>
 					</Option>
 					<Option><!-- 32 -->
 						<Text>KC - Floor 3</Text>
-						<Value>kcfl3</Value>
+						<Value>KC_Floor3</Value>
 					</Option>
 					<Option><!-- 33 -->
 						<Text>KC - Floor 4</Text>
-						<Value>kcfl4</Value>
+						<Value>KC_Floor4</Value>
 					</Option>
 					<Option><!-- 34 -->
 						<Text>KC - Floor 5</Text>
-						<Value>kcfl5</Value>
+						<Value>KC_Floor5</Value>
 					</Option>
 					<Option><!-- 35 -->
 						<Text>KC - Grad Lab</Text>
-						<Value>kcgradlab</Value>
+						<Value>KC_Grad_Lab</Value>
 					</Option>
 					<Option><!-- 36 -->
 						<Text>KC - Small Training Lab</Text>
