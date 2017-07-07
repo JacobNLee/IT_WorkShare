@@ -2,7 +2,7 @@
 	<Height>400</Height>
 	<Width>400</Width>
 
-	<HardwareEval /><!--Basic System Variables, isLaptop etc. -->
+	<HardwareEval />
 
 	<!-- Window generates in center of screen -->
 	<!-- Reported variables does not change -->
@@ -26,7 +26,7 @@
 				<Style>Italic</Style>
 			</Font>
 		</Formatting>
-	</Buttons><!-- End Buttons-->
+	</Buttons>
 
 	<!-- Footer doesn't change -->
 	<Footer>
@@ -35,19 +35,21 @@
 		<Height>40</Height>
 		<HAlign>Left</HAlign>
 
+
 		<Image>
 				<File>avatar.jpg</File>
 				<Width>40</Width>
 				<Height>40</Height>
 				<Stretch>Uniform</Stretch>					
 		</Image>
-	</Footer><!-- End Footer -->
+	</Footer>
 
 
-	
-	<Page><!-- Main Page -->
-		<Heading><!-- Main Page Heading -->
-			<Bg-Color>#003366</Bg-Color><!-- Nevada Blue -->
+	<!-- Pg.1: Main info -->
+	<Page>
+		<!-- Heading 1 -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
 			<Title>Base Info</Title>
 			<Text>Default Information about the Machine</Text>
 			<Height>40</Height>
@@ -59,7 +61,8 @@
 				<Height>34</Height>
 				<Stretch>Uniform</Stretch>					
 			</Image>
-		</Heading><!-- End Main Page Heading -->
+
+		</Heading>
 
 		<Row>		
 			<Column>
@@ -68,13 +71,15 @@
 					<RightCellWidth>160</RightCellWidth>
 				</Formatting>
 				
-				<!-- Collection List -->
-				<GuiOption Type="DropDownList" ID="source_collection">
+				<!-- GUIOptions -->
+
+				<!-- Dropdown Toggles -->
+				<GuiOption Type="DropDownList">
 					<Variable>collection_name</Variable>
 					<Label>Select Option</Label>		
 
 					<Option><!-- 1-->
-						<Toggle Group="Group_Labs">
+						<Toggle Group="Group_1">
 							<Hide/>
 						</Toggle>
 						<Text>OIT Labs Image</Text>
@@ -82,7 +87,7 @@
 					</Option>
 					
 					<Option><!-- 2 -->
-						<Toggle Group="Group_Desktop">
+						<Toggle Group="Group_2">
 							<Hide/>
 						</Toggle>
 						<Text>Desktop Base Image</Text>
@@ -90,15 +95,15 @@
 					</Option>
 
 					<Option><!-- 3 -->
-						<Toggle Group="Group_Clinic">
+						<Toggle Group="Group_3">
 							<Hide/>
 						</Toggle>
 						<Text>Clinic</Text>
-						<Value>clinic</Value>
+						<Value>clinics</Value>
 					</Option>
 
 					<Option><!-- 4 -->
-						<Toggle Group="Group_Coba">
+						<Toggle Group="Group_4">
 							<Hide/>
 						</Toggle>
 						<Text>College of Business Administration</Text>
@@ -106,7 +111,7 @@
 					</Option>
 
 					<Option><!-- 5 -->
-						<Toggle Group="Group_Ecc">
+						<Toggle Group="Group_5">
 							<Hide/>
 						</Toggle>
 						<Text>Engineering Computing Center</Text>
@@ -114,15 +119,7 @@
 					</Option>
 				</GuiOption><!-- End Collection List-->
 
-<<<<<<< HEAD
-				<GuiOption Type="DropDownList" ID="source_os"><!-- OS List -->
-=======
-<<<<<<< HEAD
-				<GuiOption Type="DropDownList" ID="OS_Source">
-=======
-				<GuiOption Type="DropDownList"><!-- OS List -->
->>>>>>> e9faa5dee194f636628f32cdd81aae8707bcfee7
->>>>>>> db52dd7069f7f8ef23b2204a52ca39d26a8b6302
+				<GuiOption Type="DropDownList">
 					<Variable>os</Variable>
 					<Label>Operating System</Label>
 					<HelpText>Selects Currently Available OS</HelpText>
@@ -134,19 +131,11 @@
 						<Text>Windows 10, 64-bit</Text>
 						<Value>win10</Value>
 					</Option>
-				</GuiOption><!-- End OS List -->
+				</GuiOption>
 
-				<GuiOption Type="FreeText"><!-- Link Test -->
-					<Variable>free_link</Variable>
-					<SetValue>
-						<Query Type="LinkTo">source_collection</Query>
-					</SetValue>
-					<SetValue>
-						<Append Type="LinkTo">source_model</Append>
-					</SetValue>
-				</GuiOption><!-- End Link Test -->
 
-				<!-- Info Name -->
+
+				<!-- Current Name -->
 				<Group>Base</Group>
 				<GuiOption Type="InfoBox">
 					<Variable>VAL_CompName</Variable>
@@ -157,21 +146,21 @@
 							<Wql>SELECT Name FROM Win32_ComputerSystem</Wql>	
 						</Query>
 					</SetValue>
-				</GuiOption><!-- End Info Name -->
+				</GuiOption>
 
-				<!-- Info Model -->
-				<GuiOption Type="InfoBox" ID="source_model">
+				<!-- Computer Model -->
+				<GuiOption Type="InfoBox">
 					<Variable>VAL_Model</Variable>
 					<Label>Device Model</Label>
 					<HelpText>Model of Machine</HelpText>
 					<SetValue>
 						<Query Type="Wmi">
-							<Wql>SELECT Model FROM Win32_ComputerSystem</Wql>		
+							<Wql>SELECT Model FROM Win32_ComputerSystem</Wql>					
 						</Query>
 					</SetValue>
-				</GuiOption><!-- End Info Model -->
+				</GuiOption>
 				
-				<!-- Info Serial -->
+				<!-- Service Tag -->
 				<GuiOption Type="InfoBox">
 					<Variable>VAL_Serial</Variable>
 					<Label>Serial Number</Label>
@@ -181,9 +170,9 @@
 							<Wql>SELECT SerialNumber FROM Win32_Bios</Wql>
 						</Query>
 					</SetValue>
-				</GuiOption><!-- End Info Serial -->
+				</GuiOption>
 
-				<!-- Info Bios -->
+				<!-- BIOS Ver -->
 				<GuiOption Type="InfoBox">
 					<Variable>VAL_Bios</Variable>
 					<Label>Bios Version</Label>
@@ -193,9 +182,9 @@
 							<Wql>SELECT SMBIOSBIOSVersion FROM Win32_Bios</Wql>
 						</Query>
 					</SetValue>
-				</GuiOption><!-- End Info Bios -->
+				</GuiOption>
 
-				<!-- Info Memory -->
+				<!-- Memory -->
 				<GuiOption Type="InfoBox">
 					<Variable>VAL_Memory</Variable>
 					<Label>Memory: </Label>
@@ -210,9 +199,9 @@
 							</Property>
 						</Query>
 					</SetValue>
-				</GuiOption><!-- End Info Memory -->
+				</GuiOption>
 
-				<!-- Info Random_Data -->
+				<!-- Test Info -->
 				<GuiOption Type="InfoBox">
 					<Variable>VAL_Info</Variable>
 					<Label>Domained</Label>
@@ -222,18 +211,20 @@
 							<Wql>SELECT PartOfDomain FROM Win32_ComputerSystem</Wql>	
 						</Query>
 					</SetValue>
-				</GuiOption><!-- End Info Random_Data -->
+				</GuiOption>
+
 			</Column>
 		</Row>
-	</Page><!-- End Main Page -->
+	</Page>
 
 
 	<!-- ############################################################################## -->
 	<!-- ############################################################################## -->
 	<!-- ############################################################################## -->
 	<!-- ############################################################################## -->
-	<Page PurgeInactive="TRUE"><!-- Page Labs -->
-		<Group>Group_Labs</Group>
+	<!-- Page Labs -->
+	<Page PurgeInactive="TRUE">
+		<Group>Group_1</Group>
 
 
 		<!-- Heading 2 -->
@@ -513,7 +504,7 @@
 			</Column>
 		</Row>
 		</Row>
-	</Page><!-- End Page Labs -->
+	</Page>
 	<!-- ############################################################################## -->
 	<!-- ############################################################################## -->
 	<!-- ############################################################################## -->
@@ -522,7 +513,7 @@
 
 	<!-- Page Desktop -->
 	<Page PurgeInactive="TRUE">
-		<Group>Group_Desktop</Group>
+		<Group>Group_2</Group>
 
 		<!-- Heading 2 -->
 		<Heading>
@@ -534,7 +525,7 @@
 		<Row>
 			<Column>
 				<!-- List to modify dropdownlist -->
-				<GuiOption Type="DropDownList" ID="source_desktop">
+				<GuiOption Type="DropDownList" ID="soucre_desktop">
 					<Variable>Var_DesktopArea</Variable>
 					<Label>Site Name: </Label>
 					<Option><!-- N -->
@@ -672,8 +663,9 @@
 					</Option>
 				</GuiOption>
 
+
 				<!-- Mod Name -->
-				<GuiOption Type="FreeText" MaxLength="15" MinLength="8">
+				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8">
 					<Disallowed>
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
 					</Disallowed>
@@ -687,16 +679,16 @@
 							</Query>
 							<Query Type="LinkTo">source_desktop</Query>
 					</SetValue>
+
 				</GuiOption>
 
-				
 			</Column>
 		</Row>
-	</Page><!-- End Page Desktop -->
+	</Page>
 
 	<!-- Page Med -->
 	<Page PurgeInactive="TRUE">
-		<Group>Group_Clinic</Group>
+		<Group>Group_3</Group>
 
 		<!-- Heading 2 -->
 		<Heading>
@@ -712,7 +704,7 @@
 		</Column>
 	</Page>
 	<Page PurgeInactive="TRUE">
-		<Group>Group_Coba</Group>
+		<Group>Group_4</Group>
 
 		<!-- Heading 2 -->
 		<Heading>
@@ -727,13 +719,8 @@
 			</GuiOption>
 		</Column>
 	</Page>
-	
 	<Page PurgeInactive="TRUE">
-<<<<<<< HEAD
-		<Group>Group_5</Group>
-=======
-		<Group>Group_ECC</Group>
->>>>>>> e9faa5dee194f636628f32cdd81aae8707bcfee7
+		
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
 			<Title>ECC</Title>
@@ -744,17 +731,18 @@
 				<GuiOption Type="InfoBox">
 					<Label>Section is not yet complete.&#xD;Please check back later or contact the Labs Department.</Label>
 				</GuiOption>
+
+
 			</Column>
 		</Row>
 	</Page>
 
-<<<<<<< HEAD
 	<Page>
 		<!-- Heading 1 -->
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
 			<Title>Final</Title>
-			<Text>Please Provide a Final Confirmation of User Provided Data</Text>
+			<Text>Default Information about the Machine</Text>
 			<Height>40</Height>
 			<HAlign>Left</HAlign>		
 
@@ -767,45 +755,13 @@
 
 		</Heading>
 
-		<Row>		
-			<Column>
-				<Formatting>
-					<LeftCellWidth>110</LeftCellWidth>
-					<RightCellWidth>160</RightCellWidth>
-				</Formatting>
-				
-				<!-- GUIOptions -->
-				<GuiOption Type="InfoBox">
-					<Variable>VAL_CompName</Variable>
-					<Label>Computer Name</Label>
-					<HelpText>Current Computer Name</HelpText>
-					<SetValue>
-						<Query Type="Wmi">
-							<Wql>SELECT Name FROM Win32_ComputerSystem</Wql>	
-						</Query>
-					</SetValue>
-				</GuiOption>
-				
-				<GuiOption Type="InfoBox">
-					<Variable>info</Variable>
-					<Label>Operating System</Label>
-					<HelpText>Current Computer Operating System</HelpText>
-					<SetValue>
-						<Query Type="OptionValue">
-							<ID Name="OS_Source"/>
-						</Query>
-					</SetValue>
-				</GuiOption>
-				
+		
 			</Column>
 		</Row>
 	</Page>
 
 
 </TsGui>
-=======
-</TsGui><!-- End Program -->
->>>>>>> e9faa5dee194f636628f32cdd81aae8707bcfee7
 
 <!--
 					<Option>
