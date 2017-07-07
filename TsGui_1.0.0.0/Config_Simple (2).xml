@@ -1,0 +1,170 @@
+<TsGui LiveData="TRUE">
+	<Height>400</Height>
+	<Width>400</Width>
+
+	<!-- <HardwareEval /> -->
+
+	
+	<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Base Info</Title>
+			<Text>Default Information about the Machine</Text>
+			<Height>40</Height>
+			<HAlign>Left</HAlign>		
+
+			<Image>
+				<File>nevada.png</File>
+				<Width>34</Width>
+				<Height>34</Height>
+				<Stretch>Uniform</Stretch>					
+			</Image>
+
+	</Heading>
+
+
+	<!-- Pg.1: Main info -->
+	<Page>
+		<Row>		
+			<Column>
+				<Formatting>
+					<LeftCellWidth>110</LeftCellWidth>
+					<RightCellWidth>160</RightCellWidth>
+				</Formatting>
+
+				<!-- Dropdown Toggles -->
+				<GuiOption Type="DropDownList">
+					<Variable>collection_name</Variable>
+					<Label>Select Option</Label>
+					<DefaultValue>labs</DefaultValue>
+			
+					<Option><!-- 1 -->
+						
+						<Toggle Group="Group_1">
+							<Hide/>
+						</Toggle>
+						
+						<Text>OIT Labs Image</Text>
+						<Value>labs</Value>
+					</Option>
+					
+					<Option><!-- 2 -->
+						
+						<Toggle Group="Group_2">
+							<Hide/>
+						</Toggle>
+						<Text>Desktop Base Image</Text>
+						<Value>desktop</Value>					
+					</Option>
+					
+					<Option><!-- 2 -->
+						
+						<Toggle Group="Group_3">
+							<Hide/>
+						</Toggle>
+						<Text>Clinic</Text>
+						<Value>clinics</Value>					
+					</Option>
+
+					
+
+				
+
+				</GuiOption>
+
+
+			</Column>
+		</Row>
+	</Page><!--end main page-->
+	
+	<Page>
+		<Group>Group_1</Group>
+		<!-- Heading 1 -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Labs</Title>
+			<Text>Default Information about the Machine</Text>
+			<Height>40</Height>
+			<HAlign>Left</HAlign>		
+
+			<Image>
+				<File>nevada.png</File>
+				<Width>34</Width>
+				<Height>34</Height>
+				<Stretch>Uniform</Stretch>					
+			</Image>
+
+		</Heading>
+		<Row>
+			<Column>
+			</Column>
+		</Row>
+	</Page><!--end page 1-->
+
+	<Page>
+		<Group>Group_2</Group>
+		<!-- Heading 1 -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Desktop</Title>
+			<Text>Default Information about the Machine</Text>
+			<Height>40</Height>
+			<HAlign>Left</HAlign>		
+
+			<Image>
+				<File>nevada.png</File>
+				<Width>34</Width>
+				<Height>34</Height>
+				<Stretch>Uniform</Stretch>					
+			</Image>
+		</Heading>
+		<Row>
+			<Column>
+			</Column>
+		</Row>
+	</Page><!--end page 2-->
+
+	<Page>
+		<Group>Group_3</Group>
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Clinic</Title>
+			
+			<Height>40</Height>
+			<HAlign>Left</HAlign>		
+
+			<Image>
+				<File>nevada.png</File>
+				<Width>34</Width>
+				<Height>34</Height>
+				<Stretch>Uniform</Stretch>					
+			</Image>
+		</Heading>
+		<Row>
+			<Column>
+			</Column>
+		</Row>
+	</Page><!--end page 3-->
+	
+	<Page>
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Final</Title>
+			
+			<Height>40</Height>
+			<HAlign>Left</HAlign>		
+
+			<Image>
+				<File>nevada.png</File>
+				<Width>34</Width>
+				<Height>34</Height>
+				<Stretch>Uniform</Stretch>					
+			</Image>
+		</Heading>
+		<Row>
+			<Column>
+			</Column>
+		</Row>
+	</Page><!--end page 3-->
+
+
+</TsGui>

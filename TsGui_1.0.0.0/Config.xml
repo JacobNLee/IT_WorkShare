@@ -470,7 +470,6 @@
 				<Checked/>
 				<HelpText>7-Zip 9.20 (x64)&#xD;Adobe Flash Player 18.0.0.333 ESR&#xD;Adobe Reader DC Update 15.010.20060&#xD;Google Chrome 49.0.2623.75&#xD;Filezilla&#xD;Microsoft Office Professional Plus 2016&#xD;University Alert&#xD;</HelpText>
 			</GuiOption>
-
 			 Check Apps 2
 			<GuiOption Type="CheckBox">
 				<Variable>VAR_Package2</Variable>
@@ -478,7 +477,6 @@
 				<Checked/>
 				<HelpText>ALEKS Plugin&#xD;CDBurnerXP&#xD;Doulos SIL&#xD;EndNote Plug-Ins&#xD;Java 8 Update 45 (32 + 64)&#xD;LabStats MSI Wrapper 6.0.60.405.222&#xD;Mozilla Firefox (en-US) 38.6.1&#xD;VLC 2.2.1&#xD;</HelpText>
 			</GuiOption>
-
 				Check Deep
 				<GuiOption Type="CheckBox" ID="Deep">
 					<Variable>VAR_Deep</Variable>
@@ -781,11 +779,12 @@
 					<HelpText>Current Computer Operating System</HelpText>
 					<SetValue>
 						<Query Type="OptionValue">
-							<ID Name="OS_Source"/>
+							<ID Name="source_os"/>
 						</Query>
 					</SetValue>
 				</GuiOption>
-				
+			
+
 			</Column>
 		</Row>
 	</Page>
@@ -802,5 +801,3 @@
 						<Value>eccjot</Value>
 					</Option>	
 -->
-
-	
