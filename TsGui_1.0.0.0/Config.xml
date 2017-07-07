@@ -678,8 +678,6 @@
 							<Query Type="LinkTo">source_desktop</Query>
 					</SetValue>
 				</GuiOption>
-
-				
 			</Column>
 		</Row>
 	</Page><!-- End Page Desktop -->
@@ -721,7 +719,7 @@
 	</Page>
 	
 	<Page PurgeInactive="TRUE">
-		<Group>Group_ECC</Group>
+		<Group>Group_Ecc</Group>
 		<Heading><!-- Heading ECC -->
 			<Bg-Color>#003366</Bg-Color>
 			<Title>ECC</Title>
