@@ -44,8 +44,8 @@
 	</Footer><!-- End Footer -->
 
 
-	<!-- Pg.1: Main info -->
-	<Page>
+	
+	<Page><!-- Main Page -->
 		<Heading><!-- Main Page Heading -->
 			<Bg-Color>#003366</Bg-Color><!-- Nevada Blue -->
 			<Title>Base Info</Title>
@@ -69,7 +69,7 @@
 				</Formatting>
 				
 				<!-- Collection List -->
-				<GuiOption Type="DropDownList">
+				<GuiOption Type="DropDownList" ID="source_collection">
 					<Variable>collection_name</Variable>
 					<Label>Select Option</Label>		
 
@@ -128,6 +128,16 @@
 					</Option>
 				</GuiOption><!-- End OS List -->
 
+				<GuiOption Type="FreeText"><!-- Link Test -->
+					<Variable>free_link</Variable>
+					<SetValue>
+						<Query Type="LinkTo">source_collection</Query>
+					</SetValue>
+					<SetValue>
+						<Append Type="LinkTo">source_model</Append>
+					</SetValue>
+				</GuiOption><!-- End Link Test -->
+
 				<!-- Info Name -->
 				<Group>Base</Group>
 				<GuiOption Type="InfoBox">
@@ -142,7 +152,7 @@
 				</GuiOption><!-- End Info Name -->
 
 				<!-- Info Model -->
-				<GuiOption Type="InfoBox">
+				<GuiOption Type="InfoBox" ID="source_model">
 					<Variable>VAL_Model</Variable>
 					<Label>Device Model</Label>
 					<HelpText>Model of Machine</HelpText>
@@ -654,9 +664,8 @@
 					</Option>
 				</GuiOption>
 
-
 				<!-- Mod Name -->
-				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8">
+				<GuiOption Type="FreeText" MaxLength="15" MinLength="8">
 					<Disallowed>
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
 					</Disallowed>
@@ -670,12 +679,12 @@
 							</Query>
 							<Query Type="LinkTo">source_desktop</Query>
 					</SetValue>
-
 				</GuiOption>
 
+				
 			</Column>
 		</Row>
-	</Page><!-- End Page Desktop>
+	</Page><!-- End Page Desktop -->
 
 	<!-- Page Med -->
 	<Page PurgeInactive="TRUE">
@@ -726,9 +735,7 @@
 		</Row>
 	</Page>
 
-
-
-</TsGui>
+</TsGui><!-- End Program -->
 
 <!--
 					<Option>
