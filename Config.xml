@@ -117,8 +117,22 @@
 						<Text>Engineering Computing Center</Text>
 						<Value>ecclab</Value>
 					</Option>
+				</GuiOption><!-- End Collection List-->
 
+				<GuiOption Type="DropDownList">
+					<Variable>os</Variable>
+					<Label>Operating System</Label>
+					<HelpText>Selects Currently Available OS</HelpText>
+					<Option>
+						<Text>Windows 7, 64-bit</Text>
+						<Value>win7</Value>
+					</Option>
+					<Option>
+						<Text>Windows 10, 64-bit</Text>
+						<Value>win10</Value>
+					</Option>
 				</GuiOption>
+
 
 
 				<!-- Current Name -->
@@ -511,102 +525,7 @@
 		<Row>
 			<Column>
 				<!-- List to modify dropdownlist -->
-				<GuiOption Type="DropDownList" ID="source_desktop">
-					<Variable>Name_Desktop</Variable>
-					<Label>Lab Area: </Label>
-
-					<Option>
-						<Text>Library</Text>
-						<Value>081</Value>					
-					</Option>
-					<Option>
-						<Text>HQ</Text>
-						<Value>072</Value>					
-					</Option>
-					<Option>
-						<Text>Union</Text>
-						<Value>082</Value>					
-					</Option>
-					<Option>
-						<Text>Legacy</Text>
-						<Value>085</Value>					
-					</Option>
-					<Option>
-						<Text>Admin</Text>
-						<Value>031</Value>					
-					</Option>					
-				</GuiOption>		
-
-				<!-- Mod Name -->
-				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8">
-					<Disallowed>
-						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
-					</Disallowed>
-					<Label>Computer Name: </Label>
-					<HelpText>Requirements based on collection</HelpText>
-					<SetValue>
-							<Query Type="EnvironmentVariable">
-								<Variable>OSDComputerName</Variable>
-								<Ignore>MINNT</Ignore>
-								<Ignore>MINWIN</Ignore>
-							</Query>
-							<Query Type="LinkTo">source_desktop</Query>
-					</SetValue>
-
-				</GuiOption>
-
-			</Column>
-		</Row>
-	</Page>
-
-	<!-- Page Med -->
-	<Page PurgeInactive="TRUE">
-		<Group>Group_3</Group>
-
-		<!-- Heading 2 -->
-		<Heading>
-			<Bg-Color>#003366</Bg-Color>
-			<Title>Clinic</Title>
-			<Text>Med School Software</Text>
-		</Heading>
-
-		<Column>
-			<GuiOption Type="InfoBox">
-				<Label>Section is not yet complete.&#xD;Please check back later or contact the Labs Department.</Label>
-			</GuiOption>
-		</Column>
-	</Page>
-	<Page PurgeInactive="TRUE">
-		<Group>Group_4</Group>
-
-		<!-- Heading 2 -->
-		<Heading>
-			<Bg-Color>#003366</Bg-Color>
-			<Title>Coba</Title>
-			<Text>College of Business Administration</Text>
-		</Heading>
-
-		<Column>
-			<GuiOption Type="InfoBox">
-				<Label>Section is not yet complete.&#xD;Please check back later or contact the Labs Department.</Label>
-			</GuiOption>
-		</Column>
-	</Page>
-	<Page PurgeInactive="TRUE">
-		
-		<Heading>
-			<Bg-Color>#003366</Bg-Color>
-			<Title>ECC</Title>
-			<Text>Engineering Computing Center</Text>
-		</Heading>
-		<Row>
-			<Column>
-				<GuiOption Type="InfoBox">
-					<Label>Section is not yet complete.&#xD;Please check back later or contact the Labs Department.</Label>
-				</GuiOption>
-
-				<
-				<GuiOption Type="DropDownList">
+				<GuiOption Type="DropDownList" ID="soucre_desktop">
 					<Variable>Var_DesktopArea</Variable>
 					<Label>Site Name: </Label>
 					<Option><!-- N -->
@@ -745,6 +664,73 @@
 				</GuiOption>
 
 
+				<!-- Mod Name -->
+				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8">
+					<Disallowed>
+						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
+					</Disallowed>
+					<Label>Computer Name: </Label>
+					<HelpText>Requirements based on collection</HelpText>
+					<SetValue>
+							<Query Type="EnvironmentVariable">
+								<Variable>OSDComputerName</Variable>
+								<Ignore>MINNT</Ignore>
+								<Ignore>MINWIN</Ignore>
+							</Query>
+							<Query Type="LinkTo">source_desktop</Query>
+					</SetValue>
+
+				</GuiOption>
+
+			</Column>
+		</Row>
+	</Page>
+
+	<!-- Page Med -->
+	<Page PurgeInactive="TRUE">
+		<Group>Group_3</Group>
+
+		<!-- Heading 2 -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Clinic</Title>
+			<Text>Med School Software</Text>
+		</Heading>
+
+		<Column>
+			<GuiOption Type="InfoBox">
+				<Label>Section is not yet complete.&#xD;Please check back later or contact the Labs Department.</Label>
+			</GuiOption>
+		</Column>
+	</Page>
+	<Page PurgeInactive="TRUE">
+		<Group>Group_4</Group>
+
+		<!-- Heading 2 -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Coba</Title>
+			<Text>College of Business Administration</Text>
+		</Heading>
+
+		<Column>
+			<GuiOption Type="InfoBox">
+				<Label>Section is not yet complete.&#xD;Please check back later or contact the Labs Department.</Label>
+			</GuiOption>
+		</Column>
+	</Page>
+	<Page PurgeInactive="TRUE">
+		
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>ECC</Title>
+			<Text>Engineering Computing Center</Text>
+		</Heading>
+		<Row>
+			<Column>
+				<GuiOption Type="InfoBox">
+					<Label>Section is not yet complete.&#xD;Please check back later or contact the Labs Department.</Label>
+				</GuiOption>
 
 
 			</Column>
