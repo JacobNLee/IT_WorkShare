@@ -238,43 +238,43 @@
 					<Label>Lab Name: </Label>
 					<Option><!-- 1 -->
 						<Text>Advising</Text>
-						<Value>advising</Value>					
+						<Value>Advising</Value>					
 					</Option>
 					<Option><!-- 2 -->
 						<Text>Arentz Student Center</Text>
-						<Value>arentz</Value>					
+						<Value>Arentz_Student_Center</Value>					
 					</Option>
 					<Option><!-- 3 -->
 						<Text>Athletics</Text>
-						<Value>athletics</Value>					
+						<Value>Athletics</Value>					
 					</Option>	
 					<Option><!-- 4 -->
 						<Text>Career Studio</Text>
-						<Value>career</Value>					
+						<Value>Career_Studio</Value>					
 					</Option>
 					<Option><!-- 5 -->
 						<Text>CASAT - NRAP Lab</Text>
-						<Value>casat</Value>					
+						<Value>CASAT_NRAP_LAB</Value>					
 					</Option>
 					<Option><!-- 6 -->
 						<Text>College of Education</Text>
-						<Value>coe</Value>					
+						<Value>College_of_Education</Value>					
 					</Option>	
 					<Option><!-- 7 -->
 						<Text>COE - Education Science</Text>
-						<Value>edscience</Value>					
+						<Value>COE_Education_Science</Value>					
 					</Option>
 					<Option><!-- 8 -->
 						<Text>COE - Learning Resource Center</Text>
-						<Value>lrc</Value>					
+						<Value>COE_Learning_Resource_Center</Value>					
 					</Option>
 					<Option><!-- 9 -->
 						<Text>COE - LRC Media Lab</Text>
-						<Value>lrcmedia</Value>					
+						<Value>COE_LRC_Media_Lab</Value>					
 					</Option>
 					<Option><!-- 10 -->
 						<Text>COE - Raggio Research</Text>
-						<Value>raggio</Value>					
+						<Value>COE_Raggio_Research</Value>					
 					</Option>	
 					<Option><!-- 11 -->
 						<Text>College of Liberal Arts</Text>
@@ -282,15 +282,15 @@
 					</Option>
 					<Option><!-- 12 -->
 						<Text>College of Science Advising Lab</Text>
-						<Value>scienceadvising</Value>					
+						<Value>College_of_Science_Advising_Lab</Value>					
 					</Option>
 					<Option><!-- 13 -->
 						<Text>COS - Geography Lab</Text>
-						<Value>geog</Value>					
+						<Value>COS_Geography_Lab</Value>					
 					</Option>	
 					<Option><!-- 14 -->
 						<Text>Dataworks North</Text>
-						<Value>dwn</Value>					
+						<Value>Dataworks_North</Value>					
 					</Option>
 					<Option><!-- 15 -->
 						<Text>Dataworks South</Text>
