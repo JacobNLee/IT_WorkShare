@@ -433,7 +433,7 @@
 
 		<Row>		
 			<Column>
-<<<<<<< HEAD
+
 				<!--
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
 =======
@@ -771,7 +771,7 @@
 				</GuiOption>
 				
 				<GuiOption Type="InfoBox">
-					<Variable>info</Variable>
+					
 					<Label>Operating System</Label>
 					<HelpText>Current Computer Operating System</HelpText>
 					<SetValue>
