@@ -433,12 +433,10 @@
 
 		<Row>		
 			<Column>
-<<<<<<< HEAD
 				<!--
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
-=======
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15" ID = "source_computerName">	
->>>>>>> ef368147b9d4689888bb51b74287d8da3868ee60
+
 					<Disallowed>
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
 					</Disallowed>
@@ -459,6 +457,7 @@
 					<SetValue>
 							<Query Type="LinkTo">source_labname</Query>
 					</SetValue>
+					
 				</GuiOption>
 				
 
