@@ -232,7 +232,7 @@
 		<Row>
 			<Column>
 				<!-- List to modify dropdownlist -->
-				<GuiOption Type="DropDownList">
+				<GuiOption Type="DropDownList" ID="source_labname">
 					<Variable>Var_LabArea</Variable>
 					<Label>Lab Name: </Label>
 					<Option><!-- 1 -->
@@ -433,6 +433,7 @@
 
 		<Row>		
 			<Column>
+				<!--
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
 					<Disallowed>
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
@@ -441,8 +442,9 @@
 					<Label>Computer Name: </Label>
 					<HelpText>Min length 1, Max length 15</HelpText>
 				</GuiOption>
+			-->
 
-				<!-- Mod Name 
+				<!-- Mod Name -->
 				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8">
 					<Variable>Name_Labs</Variable>
 					<Disallowed>
@@ -451,15 +453,10 @@
 					<Label>Computer Name: </Label> 
 					<HelpText>Max Length 15 Characters</HelpText>
 					<SetValue>
-							<Query Type="EnvironmentVariable">
-								<Variable>OSDComputerName</Variable>
-								<Ignore>MINNT</Ignore>
-								<Ignore>MINWIN</Ignore>
-							</Query>
-								<Query Type="LinkTo">source_labs</Query>
+							<Query Type="LinkTo">source_labname</Query>
 					</SetValue>
 				</GuiOption>
-				-->
+				
 
 			<!--
 			 Check Apps 1 
@@ -755,7 +752,7 @@
 				<Formatting>
 					<LeftCellWidth>110</LeftCellWidth>
 					<RightCellWidth>160</RightCellWidth>
-				</Formatting>
+				</Formatting>f
 				
 				<!-- GUIOptions -->
 				<GuiOption Type="InfoBox">
