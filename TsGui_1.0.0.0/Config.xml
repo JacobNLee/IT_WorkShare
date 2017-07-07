@@ -228,7 +228,7 @@
 		<Group>Group_Labs</Group>
 
 
-		<!-- Heading 2 -->
+		<!-- Heading Labs -->
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
 			<Title>Labs Team</Title>
@@ -516,11 +516,12 @@
 	<Page PurgeInactive="TRUE">
 		<Group>Group_Desktop</Group>
 
-		<!-- Heading 2 -->
+		<!-- Heading Desktop -->
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
 			<Title>Desktop Support</Title>
 			<Text>Desktop Software</Text>
+			<Height>40</Height>
 		</Heading>
 
 		<Row>
@@ -690,11 +691,12 @@
 	<Page PurgeInactive="TRUE">
 		<Group>Group_Clinic</Group>
 
-		<!-- Heading 2 -->
+		<!-- Heading Clinic -->
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
 			<Title>Clinic</Title>
 			<Text>Med School Software</Text>
+			<Height>40</Height>
 		</Heading>
 
 		<Column>
@@ -706,11 +708,12 @@
 	<Page PurgeInactive="TRUE">
 		<Group>Group_Coba</Group>
 
-		<!-- Heading 2 -->
+		<!-- Heading Coba -->
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
 			<Title>Coba</Title>
 			<Text>College of Business Administration</Text>
+			<Height>40</Height>
 		</Heading>
 
 		<Column>
@@ -722,10 +725,11 @@
 	
 	<Page PurgeInactive="TRUE">
 		<Group>Group_ECC</Group>
-		<Heading>
+		<Heading><!-- Heading ECC -->
 			<Bg-Color>#003366</Bg-Color>
 			<Title>ECC</Title>
 			<Text>Engineering Computing Center</Text>
+			<Height>40</Height>
 		</Heading>
 		<Row>
 			<Column>
@@ -737,7 +741,7 @@
 	</Page>
 
 	<Page>
-		<!-- Heading 1 -->
+		<!-- Heading Final -->
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
 			<Title>Final</Title>
