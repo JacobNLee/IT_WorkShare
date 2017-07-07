@@ -1,0 +1,20 @@
+<TsGui LiveData="TRUE">
+	<Height>400</Height>
+	<Width>400</Width>
+
+	<HardwareEval />
+
+	<Heading>
+		<Title>Test</Title>
+		<Text>Sample Text</Text>
+	</Heading>
+
+	<Page>
+		<Row>
+			<Column>
+				<GuiOption Type="ComputerName"/>
+			</Column>
+		</Row>
+	</Page>
+
+</TsGui>

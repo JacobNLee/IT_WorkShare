@@ -1,0 +1,49 @@
+<MaxLength/>
+<MinLength/>
+<Valid>
+<Invalid>
+	<Rule Type="Startswith" CaseSensitive="TRUE">AB</Rule>
+	<Rule Type="EndsWith/Contains/Characters"></Rule>
+	<Rule Type="RegEx"></Rule>
+</Invalid>
+
+<DefaultValue/>
+<HelpText>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[‎6/‎1/‎2017 2:33 PM] Douglas L Bookey: 
+http://www.potentengineer.com/designing-dynamic-osd-environments-and-task-sequences/ 
+
+
+
+[‎6/‎1/‎2017 2:37 PM] Douglas L Bookey: 
+http://www.potentengineer.com/powershell-osd-frontend-2-0/ 
+
+
+
+[‎6/‎1/‎2017 2:39 PM] Douglas L Bookey: 
+http://blog.coretech.dk/kea/coretech-hta/ 
+
