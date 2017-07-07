@@ -119,9 +119,9 @@
 					<SetValue>
 						<Query Type="LinkTo">source_collection</Query>
 					</SetValue>
-					<SetValue>
+					
 						<Append Type="LinkTo">source_model</Append>
-					</SetValue>
+					
 				</GuiOption><!-- End Link Test -->
 
 				<!-- Info Name -->
@@ -440,7 +440,6 @@
 					<Variable>Var_ComputerName</Variable>
 					<Label>Computer Name: </Label>
 					<HelpText>Min length 1, Max length 15</HelpText>
-
 				</GuiOption>
 
 				<!-- Mod Name 
@@ -493,7 +492,6 @@
 	<!-- ############################################################################## -->
 	<!-- ############################################################################## -->
 	<!-- ############################################################################## -->
-
 
 	<!-- Page Desktop -->
 	<Page PurgeInactive="TRUE">
