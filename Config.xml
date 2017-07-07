@@ -119,7 +119,7 @@
 					</Option>
 				</GuiOption><!-- End Collection List-->
 
-				<GuiOption Type="DropDownList" ID="OS_Source">
+				<GuiOption Type="DropDownList">
 					<Variable>os</Variable>
 					<Label>Operating System</Label>
 					<HelpText>Selects Currently Available OS</HelpText>
@@ -719,9 +719,8 @@
 			</GuiOption>
 		</Column>
 	</Page>
-	
 	<Page PurgeInactive="TRUE">
-		<Group>Group_5</Group>
+		
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
 			<Title>ECC</Title>
@@ -743,7 +742,7 @@
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
 			<Title>Final</Title>
-			<Text>Please Provide a Final Confirmation of User Provided Data</Text>
+			<Text>Default Information about the Machine</Text>
 			<Height>40</Height>
 			<HAlign>Left</HAlign>		
 
@@ -756,36 +755,7 @@
 
 		</Heading>
 
-		<Row>		
-			<Column>
-				<Formatting>
-					<LeftCellWidth>110</LeftCellWidth>
-					<RightCellWidth>160</RightCellWidth>
-				</Formatting>
-				
-				<!-- GUIOptions -->
-				<GuiOption Type="InfoBox">
-					<Variable>VAL_CompName</Variable>
-					<Label>Computer Name</Label>
-					<HelpText>Current Computer Name</HelpText>
-					<SetValue>
-						<Query Type="Wmi">
-							<Wql>SELECT Name FROM Win32_ComputerSystem</Wql>	
-						</Query>
-					</SetValue>
-				</GuiOption>
-				
-				<GuiOption Type="InfoBox">
-					<Variable>info</Variable>
-					<Label>Operating System</Label>
-					<HelpText>Current Computer Operating System</HelpText>
-					<SetValue>
-						<Query Type="OptionValue">
-							<ID Name="OS_Source"/>
-						</Query>
-					</SetValue>
-				</GuiOption>
-				
+		
 			</Column>
 		</Row>
 	</Page>
