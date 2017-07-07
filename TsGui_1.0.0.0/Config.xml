@@ -434,7 +434,19 @@
 		<Row>		
 			<Column>
 
-				
+				<!--
+				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
+				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15" ID = "source_computerName">	
+
+					<Disallowed>
+						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
+					</Disallowed>
+					<Variable>Var_ComputerName</Variable>
+					<Label>Computer Name: </Label>
+					<HelpText>Min length 1, Max length 15</HelpText>
+				</GuiOption>
+			-->
+
 
 				<!-- Mod Name -->
 				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8" >
@@ -447,6 +459,7 @@
 					<SetValue>
 							<Query Type="LinkTo">source_labname</Query>
 					</SetValue>
+					
 				</GuiOption>
 				
 
