@@ -1,0 +1,646 @@
+<TsGui LiveData="TRUE">
+	<Height>400</Height>
+	<Width>400</Width>
+
+	<HardwareEval />
+
+	<!-- Window generates in center of screen -->
+	<!-- Reported variables does not change -->
+	<WindowLocation>
+		<Left>400</Left>								
+		<Top>20</Top>
+		<StartupLocation>Center</StartupLocation>		<!-- Manual | Center -->
+	</WindowLocation>
+	
+	<!-- Rounded buttons, standard labels -->
+	<Buttons>
+		<Next>Next Page</Next>
+		<Back>Back</Back>
+		<Cancel>Cancel</Cancel>
+		<Finish>Finish</Finish>
+		<Formatting>
+			<CornerRadius>7</CornerRadius>
+			<HorizontalAlignment>Right</HorizontalAlignment>
+			<Font>
+				<Size>15</Size>
+				<Style>Italic</Style>
+			</Font>
+		</Formatting>
+	</Buttons>
+
+	<!-- Footer doesn't change -->
+	<Footer>
+		<Bg-Color>#003366</Bg-Color>
+		<Text>SCCM Frontend v.1.0&#xD;Powered by TsGui, visit https://www.20road.com</Text>
+		<Height>40</Height>
+		<HAlign>Left</HAlign>
+
+
+		<Image>
+				<File>avatar.jpg</File>
+				<Width>40</Width>
+				<Height>40</Height>
+				<Stretch>Uniform</Stretch>					
+		</Image>
+	</Footer>
+
+
+	<!-- Pg.1: Main info -->
+	<Page>
+		<!-- Heading 1 -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Base Info</Title>
+			<Text>Default Information about the Machine</Text>
+			<Height>40</Height>
+			<HAlign>Left</HAlign>		
+
+			<Image>
+				<File>nevada.png</File>
+				<Width>34</Width>
+				<Height>34</Height>
+				<Stretch>Uniform</Stretch>					
+			</Image>
+
+		</Heading>
+
+		<Row>		
+			<Column>
+				<Formatting>
+					<LeftCellWidth>110</LeftCellWidth>
+					<RightCellWidth>160</RightCellWidth>
+				</Formatting>
+				
+				<!-- GUIOptions -->
+
+				<!-- Dropdown Toggles -->
+				<GuiOption Type="DropDownList">
+					<Variable>collection_name</Variable>
+					<Label>Select Option</Label>		
+
+					<Option><!-- 1-->
+						<Toggle Group="Group_1">
+							<Hide/>
+						</Toggle>
+						<Text>OIT Labs Image</Text>
+						<Value>labs</Value>
+					</Option>
+					
+					<Option><!-- 2 -->
+						<Toggle Group="Group_2">
+							<Hide/>
+						</Toggle>
+						<Text>Desktop Base Image</Text>
+						<Value>desktop</Value>					
+					</Option>
+
+					<Option><!-- 3 -->
+						<Toggle Group="Group_3">
+							<Hide/>
+						</Toggle>
+						<Text>Clinic</Text>
+						<Value>clinics</Value>
+					</Option>
+
+					<Option><!-- 4 -->
+						<Toggle Group="Group_4">
+							<Hide/>
+						</Toggle>
+						<Text>College of Business Administration</Text>
+						<Value>cobalab</Value>
+					</Option>
+
+					<Option><!-- 5 -->
+						<Toggle Group="Group_5">
+							<Hide/>
+						</Toggle>
+						<Text>Engineering Computing Center</Text>
+						<Value>ecclab</Value>
+					</Option>
+
+				</GuiOption>
+
+
+				<!-- Current Name -->
+				<Group>Base</Group>
+				<GuiOption Type="InfoBox">
+					<Variable>VAL_CompName</Variable>
+					<Label>Computer Name</Label>
+					<HelpText>Current Computer Name</HelpText>
+					<SetValue>
+						<Query Type="Wmi">
+							<Wql>SELECT Name FROM Win32_ComputerSystem</Wql>	
+						</Query>
+					</SetValue>
+				</GuiOption>
+
+				<!-- Computer Model -->
+				<GuiOption Type="InfoBox">
+					<Variable>VAL_Model</Variable>
+					<Label>Device Model</Label>
+					<HelpText>Model of Machine</HelpText>
+					<SetValue>
+						<Query Type="Wmi">
+							<Wql>SELECT Model FROM Win32_ComputerSystem</Wql>					
+						</Query>
+					</SetValue>
+				</GuiOption>
+				
+				<!-- Service Tag -->
+				<GuiOption Type="InfoBox">
+					<Variable>VAL_Serial</Variable>
+					<Label>Serial Number</Label>
+					<HelpText>Serial as reported by the system BIOS</HelpText>
+					<SetValue>
+						<Query Type="Wmi">
+							<Wql>SELECT SerialNumber FROM Win32_Bios</Wql>
+						</Query>
+					</SetValue>
+				</GuiOption>
+
+				<!-- BIOS Ver -->
+				<GuiOption Type="InfoBox">
+					<Variable>VAL_Bios</Variable>
+					<Label>Bios Version</Label>
+					<HelpText>Current Version of System BIOS</HelpText>
+					<SetValue>
+						<Query Type="Wmi">
+							<Wql>SELECT SMBIOSBIOSVersion FROM Win32_Bios</Wql>
+						</Query>
+					</SetValue>
+				</GuiOption>
+
+				<!-- Memory -->
+				<GuiOption Type="InfoBox">
+					<Variable>VAL_Memory</Variable>
+					<Label>Memory: </Label>
+					<HelpText>Currenty available memory to the device.</HelpText>
+					<SetValue>
+						<Query Type="Wmi">
+							<Wql>SELECT TotalPhysicalMemory FROM Win32_ComputerSystem</Wql>
+							<Property Name="TotalPhysicalMemory">
+								<Calculate DecimalPlaces="0">VALUE/1073741824</Calculate>
+								<Append> GB</Append>
+								<Append></Append>
+							</Property>
+						</Query>
+					</SetValue>
+				</GuiOption>
+
+				<!-- Test Info -->
+				<GuiOption Type="InfoBox">
+					<Variable>VAL_Info</Variable>
+					<Label>Domained</Label>
+					<HelpText>WOW!</HelpText>
+					<SetValue>
+						<Query Type="Wmi">
+							<Wql>SELECT PartOfDomain FROM Win32_ComputerSystem</Wql>	
+						</Query>
+					</SetValue>
+				</GuiOption>
+
+			</Column>
+		</Row>
+	</Page>
+
+
+	<!-- ############################################################################## -->
+	<!-- ############################################################################## -->
+	<!-- ############################################################################## -->
+	<!-- ############################################################################## -->
+	<!-- Page Labs -->
+	<Page PurgeInactive="TRUE">
+		<Group>Group_1</Group>
+
+
+		<!-- Heading 2 -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Labs Team</Title>
+			<Text>Labs Software</Text>
+			<Height>40</Height>
+
+			<Image>
+				<File>nevada.png</File>
+				<Width>34</Width>
+				<Height>34</Height>
+				<Stretch>Uniform</Stretch>					
+			</Image>
+		</Heading>
+
+		<Row>
+			<Column>
+
+				<!-- List to modify dropdownlist -->
+				<GuiOption Type="DropDownList">
+					<Variable>Var_LabArea</Variable>
+					<Label>Lab Name: </Label>
+					<Option><!-- 1 -->
+						<Text>Advising</Text>
+						<Value>advising</Value>					
+					</Option>
+					<Option><!-- 2 -->
+						<Text>Arentz Student Center</Text>
+						<Value>arentz</Value>					
+					</Option>
+					<Option><!-- 3 -->
+						<Text>Athletics</Text>
+						<Value>athletics</Value>					
+					</Option>	
+					<Option><!-- 4 -->
+						<Text>Career Studio</Text>
+						<Value>career</Value>					
+					</Option>
+					<Option><!-- 5 -->
+						<Text>CASAT - NRAP Lab</Text>
+						<Value>casat</Value>					
+					</Option>
+					<Option><!-- 6 -->
+						<Text>College of Education</Text>
+						<Value>coe</Value>					
+					</Option>	
+					<Option><!-- 7 -->
+						<Text>COE - Education Science</Text>
+						<Value>edscience</Value>					
+					</Option>
+					<Option><!-- 8 -->
+						<Text>COE - Learning Resource Center</Text>
+						<Value>lrc</Value>					
+					</Option>
+					<Option><!-- 9 -->
+						<Text>COE - LRC Media Lab</Text>
+						<Value>lrcmedia</Value>					
+					</Option>
+					<Option><!-- 10 -->
+						<Text>COE - Raggio Research</Text>
+						<Value>raggio</Value>					
+					</Option>	
+					<Option><!-- 11 -->
+						<Text>College of Liberal Arts</Text>
+						<Value>cla</Value>					
+					</Option>
+					<Option><!-- 12 -->
+						<Text>College of Science Advising Lab</Text>
+						<Value>scienceadvising</Value>					
+					</Option>
+					<Option><!-- 13 -->
+						<Text>COS - Geography Lab</Text>
+						<Value>geog</Value>					
+					</Option>	
+					<Option><!-- 14 -->
+						<Text>Dataworks North</Text>
+						<Value>dwn</Value>					
+					</Option>
+					<Option><!-- 15 -->
+						<Text>Dataworks South</Text>
+						<Value>dws</Value>					
+					</Option>
+					<Option><!-- 16 -->
+						<Text>DeLaMare Library</Text>
+						<Value>dlm</Value>					
+					</Option>	
+					<Option><!-- 17 -->
+						<Text>Disability Resource Center</Text>
+						<Value>drc</Value>					
+					</Option>
+					<Option><!-- 18 -->
+						<Text>Division of Health Science - Advising Lab</Text>
+						<Value>healthsci</Value>					
+					</Option>
+					<Option><!-- 19 -->
+						<Text>DMS - 106</Text>
+						<Value>dms</Value>					
+					</Option>
+					<Option><!-- 20 -->
+						<Text>Foreign Languages Lab</Text>
+						<Value>fll</Value>
+					</Option>	
+					<Option><!-- 21 -->
+						<Text>Glazner</Text>
+						<Value>glazner</Value>
+					</Option>	 
+					<Option><!-- 22 -->
+						<Text>Honor's Program</Text>
+						<Value>honors</Value>
+					</Option>	
+					<Option><!-- 23 -->
+						<Text>InNevation Center</Text>
+						<Value>innevation</Value>
+					</Option>
+					<Option><!-- 24 -->
+						<Text>Joe Crowley Student Union</Text>
+						<Value>jcsu</Value>
+					</Option>	 
+					<Option><!-- 25 -->
+						<Text>JCSU - ASUN</Text>
+						<Value>asun</Value>
+					</Option>	
+					<Option><!-- 26 -->
+						<Text>JCSU - Cultural Center For Diversity </Text>
+						<Value>diversity</Value>
+					</Option>
+					<Option><!-- 27 -->
+						<Text>JCSU - Graduate Student Association</Text>
+						<Value>gsa</Value>
+					</Option>
+					<Option><!-- 28 -->
+						<Text>JCSU - Tech Talk</Text>
+						<Value>techtalk</Value>
+					</Option>
+					<Option><!-- 29 -->
+						<Text>Knowledge Center - Big Training Lab</Text>
+						<Value>bigtrain</Value>
+					</Option>
+					<Option><!-- 30 -->
+						<Text>KC - Floor 1</Text>
+						<Value>kcfl1</Value>
+					</Option>
+					<Option><!-- 31 -->
+						<Text>KC - Floor 2</Text>
+						<Value>kcfl2</Value>
+					</Option>
+					<Option><!-- 32 -->
+						<Text>KC - Floor 3</Text>
+						<Value>kcfl3</Value>
+					</Option>
+					<Option><!-- 33 -->
+						<Text>KC - Floor 4</Text>
+						<Value>kcfl4</Value>
+					</Option>
+					<Option><!-- 34 -->
+						<Text>KC - Floor 5</Text>
+						<Value>kcfl5</Value>
+					</Option>
+					<Option><!-- 35 -->
+						<Text>KC - Grad Lab</Text>
+						<Value>kcgradlab</Value>
+					</Option>
+					<Option><!-- 36 -->
+						<Text>KC - Small Training Lab</Text>
+						<Value>smalltrain</Value>
+					</Option>
+					<Option><!-- 37 -->
+						<Text>Math Center</Text>
+						<Value>math</Value>
+					</Option>
+					<Option><!-- 38 -->
+						<Text>Med - Las Vegas Library</Text>
+						<Value>vegas</Value>
+					</Option>
+					<Option><!-- 39 -->
+						<Text>Med - Savitt Lab</Text>
+						<Value>savitt</Value>
+					</Option>
+					<Option><!-- 40 -->
+						<Text>Mapping Modeling Visualization Lab (MMV)</Text>
+						<Value>mmv</Value>
+					</Option>
+					<Option><!-- 41 -->
+						<Text>Physics Lab</Text>
+						<Value>physics</Value>
+					</Option>
+					<Option><!-- 42 -->
+						<Text>Pennington Student Achievement Center - Floor 1</Text>
+						<Value>psacfl1</Value>
+					</Option>
+					<Option><!-- 43 -->
+						<Text>PSAC - Floor 4</Text>
+						<Value>psacfl4</Value>
+					</Option>
+					<Option><!-- 44 -->
+						<Text>Psychology</Text>
+						<Value>psych</Value>
+					</Option>
+					<Option><!-- 45 -->
+						<Text>TRIO/McNair</Text>
+						<Value>trio</Value>
+					</Option>
+					<Option><!-- 46 -->
+						<Text>Upward Bound</Text>
+						<Value>upwardbound</Value>
+					</Option>
+					<Option><!-- 47 -->
+						<Text>Veteran Services Office</Text>
+						<Value>veteran</Value>
+					</Option>
+					<Option><!-- 48 -->
+						<Text>Writing Center</Text>
+						<Value>writing</Value>
+					</Option>
+
+				</GuiOption>		
+
+			</Column>
+			<Row>
+			<Column>
+				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
+					<Disallowed>
+						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
+					</Disallowed>
+					<Variable>Var_ComputerName</Variable>
+					<Label>Computer Name: </Label>
+					<HelpText>Min length 1, Max length 15</HelpText>
+
+				</GuiOption>
+
+				<!-- Mod Name 
+				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8">
+					<Variable>Name_Labs</Variable>
+					<Disallowed>
+						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
+					</Disallowed>
+					<Label>Computer Name: </Label> 
+					<HelpText>Max Length 15 Characters</HelpText>
+					<SetValue>
+							<Query Type="EnvironmentVariable">
+								<Variable>OSDComputerName</Variable>
+								<Ignore>MINNT</Ignore>
+								<Ignore>MINWIN</Ignore>
+							</Query>
+								<Query Type="LinkTo">source_labs</Query>
+					</SetValue>
+				</GuiOption>
+				-->
+
+			<!--
+			 Check Apps 1 
+			<GuiOption Type="CheckBox">
+				<Variable>VAR_Package1</Variable>
+				<Label>Install Core Applications</Label>
+				<Checked/>
+				<HelpText>7-Zip 9.20 (x64)&#xD;Adobe Flash Player 18.0.0.333 ESR&#xD;Adobe Reader DC Update 15.010.20060&#xD;Google Chrome 49.0.2623.75&#xD;Filezilla&#xD;Microsoft Office Professional Plus 2016&#xD;University Alert&#xD;</HelpText>
+			</GuiOption>
+
+			 Check Apps 2
+			<GuiOption Type="CheckBox">
+				<Variable>VAR_Package2</Variable>
+				<Label>Install Secondary Applications</Label>
+				<Checked/>
+				<HelpText>ALEKS Plugin&#xD;CDBurnerXP&#xD;Doulos SIL&#xD;EndNote Plug-Ins&#xD;Java 8 Update 45 (32 + 64)&#xD;LabStats MSI Wrapper 6.0.60.405.222&#xD;Mozilla Firefox (en-US) 38.6.1&#xD;VLC 2.2.1&#xD;</HelpText>
+			</GuiOption>
+
+				Check Deep
+				<GuiOption Type="CheckBox" ID="Deep">
+					<Variable>VAR_Deep</Variable>
+					<Label>Install DeepFreeze</Label>
+					<HelpText>Installs latest branch of Faronics DeepFreeze, standard password</HelpText>
+					<Checked/>
+				</GuiOption>
+				-->
+			</Column>
+		</Row>
+		</Row>
+	</Page>
+	<!-- ############################################################################## -->
+	<!-- ############################################################################## -->
+	<!-- ############################################################################## -->
+	<!-- ############################################################################## -->
+
+
+	<!-- Page Desktop -->
+	<Page PurgeInactive="TRUE">
+		<Group>Group_2</Group>
+
+		<!-- Heading 2 -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Desktop Support</Title>
+			<Text>Desktop Software</Text>
+		</Heading>
+
+		<Row>
+			<Column>
+				<!-- List to modify dropdownlist -->
+				<GuiOption Type="DropDownList" ID="source_desktop">
+					<Variable>Name_Desktop</Variable>
+					<Label>Lab Area: </Label>
+
+					<Option>
+						<Text>Library</Text>
+						<Value>081</Value>					
+					</Option>
+					<Option>
+						<Text>HQ</Text>
+						<Value>072</Value>					
+					</Option>
+					<Option>
+						<Text>Union</Text>
+						<Value>082</Value>					
+					</Option>
+					<Option>
+						<Text>Legacy</Text>
+						<Value>085</Value>					
+					</Option>
+					<Option>
+						<Text>Admin</Text>
+						<Value>031</Value>					
+					</Option>					
+				</GuiOption>		
+
+				<!-- Mod Name -->
+				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8">
+					<Disallowed>
+						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
+					</Disallowed>
+					<Label>Computer Name: </Label>
+					<HelpText>Requirements based on collection</HelpText>
+					<SetValue>
+							<Query Type="EnvironmentVariable">
+								<Variable>OSDComputerName</Variable>
+								<Ignore>MINNT</Ignore>
+								<Ignore>MINWIN</Ignore>
+							</Query>
+							<Query Type="LinkTo">source_desktop</Query>
+					</SetValue>
+
+				</GuiOption>
+
+			</Column>
+		</Row>
+	</Page>
+
+	<!-- Page Med -->
+	<Page PurgeInactive="TRUE">
+		<Group>Group_3</Group>
+
+		<!-- Heading 2 -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Clinic</Title>
+			<Text>Med School Software</Text>
+		</Heading>
+
+		<Column>
+			<GuiOption Type="InfoBox">
+				<Label>Section is not yet complete.&#xD;Please check back later or contact the Labs Department.</Label>
+			</GuiOption>
+		</Column>
+	</Page>
+	<Page PurgeInactive="TRUE">
+		<Group>Group_4</Group>
+
+		<!-- Heading 2 -->
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Coba</Title>
+			<Text>College of Business Administration</Text>
+		</Heading>
+
+		<Column>
+			<GuiOption Type="InfoBox">
+				<Label>Section is not yet complete.&#xD;Please check back later or contact the Labs Department.</Label>
+			</GuiOption>
+		</Column>
+	</Page>
+	<Page PurgeInactive="TRUE">
+		<Group>Group_5</Group>
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>ECC</Title>
+			<Text>Engineering Computing Center</Text>
+		</Heading>
+		<Row>
+			<Column>
+				<GuiOption Type="InfoBox">
+					<Label>Section is not yet complete.&#xD;Please check back later or contact the Labs Department.</Label>
+				</GuiOption>
+			</Column>
+		</Row>
+	</Page>
+	
+	<Page>
+		<Heading>
+			<Bg-Color>#003366</Bg-Color>
+			<Title>Final</Title>
+			
+			<Height>40</Height>
+			<HAlign>Left</HAlign>		
+
+			<Image>
+				<File>nevada.png</File>
+				<Width>34</Width>
+				<Height>34</Height>
+				<Stretch>Uniform</Stretch>					
+			</Image>
+		</Heading>
+		<Row>
+			<Column>
+			</Column>
+		</Row>
+	</Page><!--end page Final-->
+
+
+</TsGui>
+
+<!--
+					<Option>
+						<Text>Engineering Computing Center</Text>
+						<Value>ecc</Value>
+					</Option>	 
+					<Option> 21 
+						<Text>ECC - Jot Travis</Text>
+						<Value>eccjot</Value>
+					</Option>	
+-->
+
+	
