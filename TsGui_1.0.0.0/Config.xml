@@ -115,6 +115,7 @@
 				</GuiOption><!-- End Collection List-->
 
 				<GuiOption Type="FreeText" ID="source_freeLink"><!-- Link Test -->
+					
 					<Variable>free_link</Variable>
 					<SetValue>
 						<Query Type="LinkTo">source_collection</Query>
@@ -668,6 +669,8 @@
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
 					</Disallowed>
 					<Label>Computer Name: </Label>
+					<!-- This GuiOption has to be named somthing else the code will crash -->
+					<Variable>Ignore</Variable>
 					<HelpText>Requirements based on collection</HelpText>
 					<SetValue>
 							<Query Type="EnvironmentVariable">
@@ -735,7 +738,8 @@
 		</Row>
 	</Page>
 
-	<Page>
+	<Page PurgeInactive="TRUE">
+		<Group>Group_Labs</Group>
 		<!-- Heading Final -->
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
@@ -772,7 +776,7 @@
 					</SetValue>
 				</GuiOption>
 				
-				<!-- OS printout -->
+				<!-- OS printout 
 				<GuiOption Type="InfoBox">
 					
 					<Label>Operating System</Label>
@@ -783,7 +787,7 @@
 						</Query>
 					</SetValue>
 				</GuiOption>
-				
+				-->
 
 				<!-- collection printout -->
 				<GuiOption Type="InfoBox">
