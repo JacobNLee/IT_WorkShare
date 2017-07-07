@@ -114,7 +114,7 @@
 					</Option>
 				</GuiOption><!-- End Collection List-->
 
-				<GuiOption Type="FreeText"><!-- Link Test -->
+				<GuiOption Type="FreeText" ID="source_freeLink"><!-- Link Test -->
 					<Variable>free_link</Variable>
 					<SetValue>
 						<Query Type="LinkTo">source_collection</Query>
@@ -126,7 +126,7 @@
 
 				<!-- Info Name -->
 				<Group>Base</Group>
-				<GuiOption Type="InfoBox">
+				<GuiOption Type="InfoBox" ID="source_computerName">
 					<Variable>VAL_CompName</Variable>
 					<Label>Computer Name</Label>
 					<HelpText>Current Computer Name</HelpText>
@@ -434,22 +434,10 @@
 		<Row>		
 			<Column>
 
-				<!--
-				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
-=======
-				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15" ID = "source_computerName">	
->>>>>>> ef368147b9d4689888bb51b74287d8da3868ee60
-					<Disallowed>
-						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
-					</Disallowed>
-					<Variable>Var_ComputerName</Variable>
-					<Label>Computer Name: </Label>
-					<HelpText>Min length 1, Max length 15</HelpText>
-				</GuiOption>
-			-->
+				
 
 				<!-- Mod Name -->
-				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8">
+				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8" >
 					<Variable>Name_Labs</Variable>
 					<Disallowed>
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
@@ -759,6 +747,7 @@
 				</Formatting>f
 				
 				<!-- GUIOptions -->
+				<!-- Computer Name printout -->
 				<GuiOption Type="InfoBox">
 					<Variable>VAL_CompName</Variable>
 					<Label>Computer Name</Label>
@@ -770,10 +759,24 @@
 					</SetValue>
 				</GuiOption>
 				
+				<!-- OS printout -->
 				<GuiOption Type="InfoBox">
 					
 					<Label>Operating System</Label>
 					<HelpText>Current Computer Operating System</HelpText>
+					<SetValue>
+						<Query Type="OptionValue">
+							<ID Name="source_os"/>
+						</Query>
+					</SetValue>
+				</GuiOption>
+				
+
+				<!-- collection printout -->
+				<GuiOption Type="InfoBox">
+					
+					<Label>User Selected Collection</Label>
+					<HelpText>Current selected collection</HelpText>
 					<SetValue>
 						<Query Type="OptionValue">
 							<ID Name="source_os"/>
