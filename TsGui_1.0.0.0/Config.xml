@@ -114,7 +114,7 @@
 					</Option>
 				</GuiOption><!-- End Collection List-->
 
-				<GuiOption Type="DropDownList"><!-- OS List -->
+				<GuiOption Type="DropDownList" ID="source_os"><!-- OS List -->
 					<Variable>os</Variable>
 					<Label>Operating System</Label>
 					<HelpText>Selects Currently Available OS</HelpText>
