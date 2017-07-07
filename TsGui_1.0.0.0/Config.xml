@@ -433,6 +433,10 @@
 
 		<Row>		
 			<Column>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7d7028b75c343767441634ec37f756f4d195b7c9
 				<!--
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15" ID = "source_computerName">	
@@ -770,7 +774,7 @@
 				</GuiOption>
 				
 				<GuiOption Type="InfoBox">
-					<Variable>info</Variable>
+					
 					<Label>Operating System</Label>
 					<HelpText>Current Computer Operating System</HelpText>
 					<SetValue>
