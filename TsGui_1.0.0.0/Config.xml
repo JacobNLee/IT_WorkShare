@@ -114,15 +114,7 @@
 					</Option>
 				</GuiOption><!-- End Collection List-->
 
-<<<<<<< HEAD
 				<GuiOption Type="DropDownList" ID="source_os"><!-- OS List -->
-=======
-<<<<<<< HEAD
-				<GuiOption Type="DropDownList" ID="OS_Source">
-=======
-				<GuiOption Type="DropDownList"><!-- OS List -->
->>>>>>> e9faa5dee194f636628f32cdd81aae8707bcfee7
->>>>>>> db52dd7069f7f8ef23b2204a52ca39d26a8b6302
 					<Variable>os</Variable>
 					<Label>Operating System</Label>
 					<HelpText>Selects Currently Available OS</HelpText>
@@ -729,11 +721,7 @@
 	</Page>
 	
 	<Page PurgeInactive="TRUE">
-<<<<<<< HEAD
-		<Group>Group_5</Group>
-=======
 		<Group>Group_ECC</Group>
->>>>>>> e9faa5dee194f636628f32cdd81aae8707bcfee7
 		<Heading>
 			<Bg-Color>#003366</Bg-Color>
 			<Title>ECC</Title>
@@ -748,7 +736,6 @@
 		</Row>
 	</Page>
 
-<<<<<<< HEAD
 	<Page>
 		<!-- Heading 1 -->
 		<Heading>
@@ -800,12 +787,8 @@
 			</Column>
 		</Row>
 	</Page>
-
-
-</TsGui>
-=======
 </TsGui><!-- End Program -->
->>>>>>> e9faa5dee194f636628f32cdd81aae8707bcfee7
+
 
 <!--
 					<Option>
