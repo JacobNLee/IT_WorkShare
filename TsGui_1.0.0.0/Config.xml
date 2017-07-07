@@ -278,7 +278,7 @@
 					</Option>	
 					<Option><!-- 11 -->
 						<Text>College of Liberal Arts</Text>
-						<Value>cla</Value>					
+						<Value>College_of_Liberal_Arts</Value>					
 					</Option>
 					<Option><!-- 12 -->
 						<Text>College of Science Advising Lab</Text>
@@ -342,7 +342,7 @@
 					</Option>
 					<Option><!-- 27 -->
 						<Text>JCSU_Graduate_Student_Association</Text>
-						<Value>gsa</Value>
+						<Value>GSA</Value>
 					</Option>
 					<Option><!-- 28 -->
 						<Text>JCSU - Tech Talk</Text>
@@ -394,7 +394,7 @@
 					</Option>
 					<Option><!-- 40 -->
 						<Text>Mapping Modeling Visualization Lab (MMV)</Text>
-						<Value>Mapping _Modeling_Visualization_Lab</Value>
+						<Value>Mapping_Modeling_Visualization_Lab</Value>
 					</Option>
 					<Option><!-- 41 -->
 						<Text>Physics Lab</Text>
@@ -406,7 +406,7 @@
 					</Option>
 					<Option><!-- 43 -->
 						<Text>PSAC - Floor 4</Text>
-						<Value>PSAC_Floor2</Value>
+						<Value>PSAC_Floor4</Value>
 					</Option>
 					<Option><!-- 44 -->
 						<Text>Psychology</Text>
