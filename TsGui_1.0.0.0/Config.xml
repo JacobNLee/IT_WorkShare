@@ -378,55 +378,55 @@
 					</Option>
 					<Option><!-- 36 -->
 						<Text>KC - Small Training Lab</Text>
-						<Value>smalltrain</Value>
+						<Value>Small_Training_Lab</Value>
 					</Option>
 					<Option><!-- 37 -->
 						<Text>Math Center</Text>
-						<Value>math</Value>
+						<Value>Math_Center</Value>
 					</Option>
 					<Option><!-- 38 -->
 						<Text>Med - Las Vegas Library</Text>
-						<Value>vegas</Value>
+						<Value>Med_Las_Vegas_Library</Value>
 					</Option>
 					<Option><!-- 39 -->
 						<Text>Med - Savitt Lab</Text>
-						<Value>savitt</Value>
+						<Value>>Med_Savitt_Lab</Value>
 					</Option>
 					<Option><!-- 40 -->
 						<Text>Mapping Modeling Visualization Lab (MMV)</Text>
-						<Value>mmv</Value>
+						<Value>Mapping _Modeling_Visualization_Lab</Value>
 					</Option>
 					<Option><!-- 41 -->
 						<Text>Physics Lab</Text>
-						<Value>physics</Value>
+						<Value>Physics_Lab</Value>
 					</Option>
 					<Option><!-- 42 -->
-						<Text>Pennington Student Achievement Center - Floor 1</Text>
-						<Value>psacfl1</Value>
+						<Text>PSAC - Floor 1</Text>
+						<Value>PSAC_Floor1</Value>
 					</Option>
 					<Option><!-- 43 -->
 						<Text>PSAC - Floor 4</Text>
-						<Value>psacfl4</Value>
+						<Value>PSAC_Floor2</Value>
 					</Option>
 					<Option><!-- 44 -->
 						<Text>Psychology</Text>
-						<Value>psych</Value>
+						<Value>Psychology</Value>
 					</Option>
 					<Option><!-- 45 -->
 						<Text>TRIO/McNair</Text>
-						<Value>trio</Value>
+						<Value>TRIO_McNair</Value>
 					</Option>
 					<Option><!-- 46 -->
 						<Text>Upward Bound</Text>
-						<Value>upwardbound</Value>
+						<Value>Upward_Bound</Value>
 					</Option>
 					<Option><!-- 47 -->
 						<Text>Veteran Services Office</Text>
-						<Value>veteran</Value>
+						<Value>Veteran_Services_Office</Value>
 					</Option>
 					<Option><!-- 48 -->
 						<Text>Writing Center</Text>
-						<Value>writing</Value>
+						<Value>Writing_Center</Value>
 					</Option>
 				</GuiOption><!-- End Lab Areas List -->
 			</Column>
