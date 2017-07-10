@@ -28,6 +28,8 @@
 		</Formatting>
 	</Buttons><!-- End Buttons-->
 
+	
+	
 	<!-- Footer doesn't change -->
 	<Footer>
 		<Bg-Color>#003366</Bg-Color>
@@ -231,7 +233,9 @@
 		</Heading>
 
 		<Row>
+		
 			<Column>
+				
 				<!-- List to modify dropdownlist -->
 				<GuiOption Type="DropDownList" ID="source_labname">
 					<Variable>Var_LabArea</Variable>
@@ -341,8 +345,8 @@
 						<Value>JCSU_Cultural_Center_For_Diversity</Value>
 					</Option>
 					<Option><!-- 27 -->
-						<Text>JCSU_Graduate_Student_Association</Text>
-						<Value>GSA</Value>
+						<Text>JCSU - Graduate Student Association</Text>
+						<Value>JCSU_Graduate_Student_Association</Value>
 					</Option>
 					<Option><!-- 28 -->
 						<Text>JCSU - Tech Talk</Text>
@@ -431,10 +435,10 @@
 				</GuiOption><!-- End Lab Areas List -->
 			</Column>
 		</Row>
-
+		
 		<Row>		
 			<Column>
-
+				<Width>400</Width>
 				<!--
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15">	
 				<GuiOption Type="ComputerName" MinLength="8" MaxLength="15" ID = "source_computerName">	
@@ -450,7 +454,8 @@
 
 
 				<!-- Mod Name -->
-				<GuiOption Type="ComputerName" MaxLength="15" MinLength="8" >
+				<GuiOption Type="FreeText"  >
+				
 					<Variable>Name_Labs</Variable>
 					<Disallowed>
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
