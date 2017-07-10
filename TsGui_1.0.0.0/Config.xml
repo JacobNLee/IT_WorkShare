@@ -75,7 +75,7 @@
 					<Variable>collection_name</Variable>
 					<Label>Select Option</Label>		
 
-					<Option><!-- 1-->
+					<Option><!-- 1 -->
 						<Toggle Group="Group_Labs">
 							<Hide/>
 						</Toggle>
@@ -153,7 +153,7 @@
 				</GuiOption><!-- End Info Model -->
 				
 				<!-- Info Serial -->
-				<GuiOption Type="InfoBox">
+				<GuiOption Type="InfoBox" ID="source_serial">
 					<Variable>VAL_Serial</Variable>
 					<Label>Serial Number</Label>
 					<HelpText>Serial as reported by the system BIOS</HelpText>
@@ -240,6 +240,7 @@
 				<GuiOption Type="DropDownList" ID="source_labname">
 					<Variable>Var_LabArea</Variable>
 					<Label>Lab Name: </Label>
+					
 					<Option><!-- 1 -->
 						<Text>Advising</Text>
 						<Value>Advising</Value>					
@@ -454,16 +455,15 @@
 
 
 				<!-- Mod Name -->
-				<GuiOption Type="FreeText"  >
+				<GuiOption Type="FreeText" ID="source_NewComputerName" MaxLength="15"  >
 				
-					<Variable>Name_Labs</Variable>
+					<Variable>new_computer_name</Variable>
 					<Disallowed>
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
 					</Disallowed>
-					<Label>Computer Name: </Label> 
+					<Label>New Computer Name: </Label> 
 					<HelpText>Max Length 15 Characters</HelpText>
 					<SetValue>
-							<Query Type="LinkTo">source_labname</Query>
 					</SetValue>
 					
 				</GuiOption>
@@ -654,6 +654,8 @@
 					</Option>
 				</GuiOption>
 
+				
+				
 				<GuiOption Type="DropDownList" ID="source_os"><!-- OS List -->
 					<Variable>os</Variable>
 					<Label>Operating System</Label>
@@ -669,11 +671,11 @@
 				</GuiOption><!-- End OS List -->
 
 				<!-- Mod Name -->
-				<GuiOption Type="FreeText" MaxLength="15" MinLength="8" ID="source_desktop">
+				<GuiOption Type="FreeText" MaxLength="3" MinLength="3" ID="source_desktop">
 					<Disallowed>
 						<Characters>`~@#$%^*()+={}[]\\/|,.? :;\"'&amp;&lt;</Characters>
 					</Disallowed>
-					<Label>Computer Name: </Label>
+					<Label>Building Number: </Label>
 					
 					<Variable>Desktop_Arr</Variable>
 					<HelpText>Requirements based on collection</HelpText>
@@ -684,6 +686,36 @@
 								<Ignore>MINWIN</Ignore>
 							</Query>
 							<Query Type="LinkTo">source_desktop_Inderect</Query>
+					</SetValue>
+				</GuiOption>
+				
+				<GuiOption Type="FreeText" MaxLength="4" MinLength="3" ID="source_roomnumber">
+					<Disallowed>
+						<!-- Only numbers -->
+					</Disallowed>
+					
+					<Label>Room Number: </Label>
+					
+					<Variable>room_number</Variable>
+					<HelpText>Requirements based on collection</HelpText>
+					<SetValue>
+					0000
+					</SetValue>
+				</GuiOption>
+				
+				<GuiOption Type="InfoBox"  ID="source_serialnum">
+					<Disallowed>
+						
+					</Disallowed>
+					
+					<Label>Serial Number: </Label>
+					
+					<Variable>serial</Variable>
+					<HelpText>Requirements based on collection</HelpText>
+					<SetValue>
+						<Query Type="OptionValue">
+							<ID Name="source_serial"/>
+						</Query>
 					</SetValue>
 				</GuiOption>
 			</Column>
@@ -813,12 +845,27 @@
 					<Label>User Selected Lab Name</Label>
 					<HelpText>Current selected Lab Name</HelpText>
 					<SetValue>
+						
 						<Query Type="OptionValue">
 							<ID Name="source_labname"/>
 						</Query>
+						
 					</SetValue>
+					
 				</GuiOption>
-			
+				
+				<GuiOption Type="InfoBox" PurgeInactive="TRUE">
+					<Label> New Computer Name</Label>
+					<HelpText>New Computer Name</HelpText>
+					<SetValue>
+						
+						<Query Type="OptionValue">
+							<ID Name="source_NewComputerName"/>
+						</Query>
+						
+					</SetValue>
+					
+				</GuiOption>
 
 			</Column>
 		</Row>
@@ -854,7 +901,7 @@
 				<!-- Computer Name printout -->
 				<GuiOption Type="InfoBox">
 					<Variable>VAL_CompName</Variable>
-					<Label>Computer Name</Label>
+					<Label>Current Computer Name</Label>
 					<HelpText>Current Computer Name</HelpText>
 					<SetValue>
 						<Query Type="OptionValue">
@@ -897,6 +944,38 @@
 					<SetValue>
 						<Query Type="OptionValue">
 							<ID Name="source_desktop"/>
+						</Query>
+					</SetValue>
+				</GuiOption>
+				
+				<GuiOption Type="InfoBox" PurgeInactive="TRUE">
+					<Label>User Selected Room Number</Label>
+					<HelpText>Current Selected Room Number</HelpText>
+					<SetValue>
+						<Query Type="OptionValue">
+							<ID Name="source_roomnumber"/>
+						</Query>
+					</SetValue>
+				</GuiOption>
+				
+				<GuiOption Type="InfoBox" PurgeInactive="TRUE">
+					<Label>New Desktop Name</Label>
+					<HelpText>Current Selected Desktop Location</HelpText>
+					<SetValue>
+						<Query Type="Combined">
+						
+							<Query Type="OptionValue">
+								<ID Name="source_desktop"/>
+							</Query>
+							
+							<Query Type="OptionValue">
+								<ID Name="source_roomnumber"/>
+							</Query>
+							
+							<Query Type="OptionValue">
+								<ID Name="source_serialnum"/>
+							</Query>
+							
 						</Query>
 					</SetValue>
 				</GuiOption>
