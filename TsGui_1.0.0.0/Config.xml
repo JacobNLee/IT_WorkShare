@@ -160,6 +160,10 @@
 					<SetValue>
 						<Query Type="Wmi">
 							<Wql>SELECT SerialNumber FROM Win32_Bios</Wql>
+							<Property Name="SerialNumber">
+								<Truncate Type="KeepFromStart">7</Truncate>	<!-- Truncate Type options: KeepFromEnd, KeepFromStart, RemoveFromEnd, RemoveFromStart -->
+								
+							</Property>
 						</Query>
 					</SetValue>
 				</GuiOption><!-- End Info Serial -->
@@ -959,8 +963,9 @@
 				</GuiOption>
 				
 				<GuiOption Type="InfoBox" PurgeInactive="TRUE">
+					
 					<Label>New Desktop Name</Label>
-					<HelpText>Current Selected Desktop Location</HelpText>
+					<Variable>new_computer_name</Variable>
 					<SetValue>
 						<Query Type="Combined">
 						
